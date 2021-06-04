@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+// 在這裡寫 php處理的資料 可多筆變數
 Route::get('/', function () {
-    return view('welcome');
+    // ['key' => 'value']
+    $discont = 0.8;
+    $totle = 500 * $discont;
+    return view('front.parallax', ['name' => 'meow', 'price' => $totle]);
+});
+Route::get('/news', function () {
+    // 輸入完DB要enter讓最上面抓到DB的套件  ->get() 抓出來
+    $news = DB::table('news')->get();
+    // dd跟consolog一樣
+    // dd($news);
+    // 傳到前端畫面 不用$字號 概念跟['key' => 'value']一樣
+    return view('front.news', compact('news'));
 });

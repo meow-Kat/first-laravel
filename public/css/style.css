@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding-top: 27px;
+    /* height: 3000px; */
+}
+
+.nav {
+    width: 100%;
+    height: 54px;
+}
+
+.nav {
+    width: 100%;
+    padding: 16px;
+    background-color: blanchedalmond;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+}
+
+a {
+    margin: 0 0 0 15px;
+}
+
+.tag {}
+
+.pic {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.img1 {
+    background-image: url(../img/神奇海螺.jpg);
+}
+
+.img2 {
+    background-image: url(../img/今天很嗆48.jpg);
+}
+
+.img3 {
+    background-image: url(../img/派耶.jpg);
+}
+
+.mask {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.4);
+    position: absolute;
+}
+
+.tittle {
+    color: whitesmoke;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%);
+    padding: 20px 80px;
+    opacity: 0.95;
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: 10px;
+}
+
+.back {
+    background-color: rgb(92, 70, 70);
+}
+
+.intro {
+    padding: 50px;
+}
+
+h1 {
+    text-align: center;
+    font: 400 15px;
+}
+
+span {
+    font-size: 20px;
+}
+
+.pic1 {
+    width: 100%;
+    height: 35vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.text_white {
+    color: whitesmoke;
+}
+
+.line-text {
+    background-color: darkgrey;
+    color: whitesmoke;
+    padding: 50px 80px;
+}
+
+#pieap {
+    position: relative;
+}
+
+#anck1 {
+    position: absolute;
+    top: -54px;
+    left: 0;
+}
+
+#anck2 {
+    position: absolute;
+    top: -54px;
+    left: 0;
+}
+
+#anck3 {
+    position: absolute;
+    top: -54px;
+    left: 0;
+}
+
+.min {
+    position: relative;
+}
+
+
