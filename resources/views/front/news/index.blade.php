@@ -19,6 +19,8 @@
                         <div class="card-body">
                           <h5 class="card-title">{{ $item->title }}</h5>
                           <p class="card-text">{{ $item->text }}</p>
+                          {{-- 包好看清楚 --}}
+                          <a href="{{asset('/news')}}/{{  $item->id }}">more...</a>
                         </div>
                       </div>
                 @endforeach
