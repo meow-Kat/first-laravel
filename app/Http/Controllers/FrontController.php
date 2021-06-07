@@ -10,7 +10,6 @@ class FrontController extends Controller
 
     // 非公開的不能被抓到 沒有 public
     // funtion 寫法
-
     public function index(){
         $news = DB::table('news')->get();
         return view('front.news.index', compact('news'));
@@ -29,6 +28,20 @@ class FrontController extends Controller
         $record = DB::table('news')->find($id); //抓出資料
         // dd($record); // 測試
         return view('front.news.detail',compact('record')); // compact('record') 抓出資料
+    }
+
+
+    // 看這邊 上面有點怪怪的 上面備註可以參考
+    public function products(){
+        $products = DB::table('products')->get();
+        return view('front.products.index',compact('products'));
+    }
+
+    public function productsDetail($id){
+        // dd($id); // 測試
+        $productsRecord = DB::table('products')->find($id); //抓出資料
+        // dd($record); // 測試
+        return view('front.products.detail',compact('productsRecord'));
     }
 
 }

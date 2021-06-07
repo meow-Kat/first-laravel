@@ -23,6 +23,7 @@
         <a href="#anck2">今天很嗆事吧</a>
         <a href="#anck3">金派</a>
         <a href="{{ asset('/') }}">Homepage</a>
+        <a href="{{ asset('/products') }}">products</a>
     </div>
 
     @yield('main')

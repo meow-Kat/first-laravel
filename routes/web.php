@@ -45,3 +45,7 @@ Route::get('/news', 'FrontController@index');
 // news串資料       ↓ 資料
 Route::get('/news/{id}', 'FrontController@newsDetail');
 
+// 作業做的
+Route::get('/products', 'FrontController@products');
+
+Route::get('/products/{id}', 'FrontController@productsDetail');

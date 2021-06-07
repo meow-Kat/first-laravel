@@ -9,6 +9,7 @@
         <div class="container">
             <h2 class="title">{{ $record->title }}</h2>
             <p class="content">{{ $record->text }}</p>
+            <a href="{{ asset('/news') }}">上一頁</a>
         </div>
     </div>
 @endsection
