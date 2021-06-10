@@ -49,3 +49,23 @@ Route::get('/news/{id}', 'FrontController@newsDetail');
 Route::get('/products', 'FrontController@products');
 
 Route::get('/products/{id}', 'FrontController@productsDetail');
+// 原本get 改成post 對應contactus
+Route::post('/push', 'FrontController@push');
+
+Route::get('/change', 'FrontController@change');
+
+Route::get('/contactus', 'FrontController@contactus');
+
+
+
+
+
+Route::get('/admin', 'ContactusController@admin');
+
+Route::get('/admin/contactus', 'ContactusController@contactus' );
+
+Route::get('/admin/contactus/edit/{id}', 'ContactusController@edit' );
+
+Route::post('/admin/contactus/update/{id}', 'ContactusController@update' );
+
+Route::delete('/admin/contactus/delete/{id}', 'ContactusController@delete');

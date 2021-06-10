@@ -24,7 +24,18 @@
         <a href="#anck3">金派</a>
         <a href="{{ asset('/') }}">Homepage</a>
         <a href="{{ asset('/products') }}">products</a>
+        <a href="{{ asset('/contactus') }}">contactus</a>
     </div>
+
+    <div class="container">
+        @if (Session::has('message'))
+        <div class="alert alert-primary pt-5" role="alert">
+            {{ Session::get('message') }}
+        </div>
+        @endif
+
+    </div>
+
 
     @yield('main')
 

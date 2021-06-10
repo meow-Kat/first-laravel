@@ -24,7 +24,7 @@ class ProductSeeder extends Seeder
             //    字串 ↓
             'name' => Str::random(10),
             'price' => rand(100,1000), // 100~1000之間
-            'discount' => rand(1,20),  // 1~20之間
+            'discount' => rand(1,10) / 10,  
             'text' => Str::random(16),
             'img' => Str::random(16),
         ]);
