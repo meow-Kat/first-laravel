@@ -15,7 +15,7 @@ class AddSomeingToProductsTable extends Migration
     {
         Schema::table('products', function (Blueprint $table) {
             //
-            $table->longText('img')->comment('產品圖片');
+            $table->longText('img')->comment('產品圖片')->nullable();
         });
     }
 

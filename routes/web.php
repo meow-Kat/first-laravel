@@ -57,15 +57,23 @@ Route::get('/change', 'FrontController@change');
 Route::get('/contactus', 'FrontController@contactus');
 
 
-
-
+// back to end
 
 Route::get('/admin', 'ContactusController@admin');
 
+// contact us
 Route::get('/admin/contactus', 'ContactusController@contactus' );
 
 Route::get('/admin/contactus/edit/{id}', 'ContactusController@edit' );
-
 Route::post('/admin/contactus/update/{id}', 'ContactusController@update' );
-
 Route::delete('/admin/contactus/delete/{id}', 'ContactusController@delete');
+
+// Product
+Route::get('/admin/product', 'ProductController@product' );
+
+Route::get('/admin/product/add', 'ProductController@add');
+
+Route::post('/admin/product/push', 'ProductController@push');
+Route::get('/admin/product/edit/{id}', 'ProductController@productEdit');
+Route::post('/admin/product/update/{id}', 'ProductController@productUpdate');
+Route::delete('/admin/product/delete/{id}', 'ProductController@productDelete');
