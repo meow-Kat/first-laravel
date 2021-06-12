@@ -44,6 +44,11 @@ class FrontController extends Controller
         return view('front.products.index',compact('products', 'discountPrice','key'));
     }
 
+    public function contactus()
+    {
+        return view('front.contactus.index');
+    }
+
     public function productsDetail($id){
         // dd($id); // 測試
         $productsRecord = DB::table('products')->find($id); //抓出資料
@@ -89,7 +94,6 @@ class FrontController extends Controller
         // $old_record = Contactus::find(1)->update([
         //     'name' => 'Meow'
         // ]);
-
 
 
         // 複數資料操作 不管幾筆使用陣列處理 把陣列取出來 針對那筆操作

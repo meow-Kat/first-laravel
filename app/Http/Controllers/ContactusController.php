@@ -12,9 +12,9 @@ class ContactusController extends Controller
     public function admin(){
         // datatable已經自動幫我們排好了
         // 排序的方法
-        $record = Contactus::sortBy('id','asc')->get();
+        // $record = Contactus::sortBy('id','asc')->get();
 
-        return view('admin.contactus.index');
+        return view('admin.index');
     }
 
     public function contactus(){
