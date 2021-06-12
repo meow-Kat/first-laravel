@@ -38,10 +38,19 @@ class FrontController extends Controller
         // 老師作法
         // php array_push
         $discountPrice = [];
-        foreach ($products as $key => $value){
-            array_push($discountPrice, round($value->price * $value->discount) );
+        // foreach ($products as $key => $value){
+            // array_push($discountPrice, round($value->price * $value->discount) );
+        // }
+        // return view('front.products.index',compact('products', 'discountPrice','key'));
+
+        $discountPricePush = DB::table('products')->selectRaw('price * discount as priceDiscount')->get();
+        foreach ($discountPricePush as $key => $value){               //              ↑
+            //          要被丟進去的陣列        要進去的值-------------------------------↑
+            array_push($discountPrice  , $value->priceDiscount);
         }
-        return view('front.products.index',compact('products', 'discountPrice','key'));
+        return view('front.products.index',compact('products', 'discountPrice','discountPricePush' ));
+    // dd($discountPricePush);
+
     }
 
     public function contactus()
