@@ -62,24 +62,22 @@
 <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
 <script>
     $(document).ready(function() {
-        $('#my-datatable').DataTable()
+        $('#my-datatable').DataTable({
+            // "ordering" : false
+        })
     } )
 </script>
 <script>
     let Delete = document.querySelectorAll('.btn-danger')
-    let form_delete = document.querySelector('.form-delete')
-    // $('.btn-danger').click(function (e) {
-        Delete.forEach(index =>{
-            index.onclick = function (e){
-                e.preventDefault()
-                let yes = confirm('確定嗎 ?')
-                if (yes){
-                    form_delete.submit()
-                }
+    let form_delete = document.querySelectorAll('.form-delete')
+    for (let index = 0; index < Delete.length; index++) {
+        Delete[index].onclick = function (e){
+            e.preventDefault()
+            let yes = confirm('確定嗎 ?')
+            if (yes){
+                form_delete[index].submit()
             }
-        })
-
-
-    // })
+        }
+    }
 </script>
 @endsection
