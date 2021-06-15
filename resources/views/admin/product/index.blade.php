@@ -64,19 +64,18 @@
     $(document).ready(function() {
         $('#my-datatable').DataTable()
     } )
-
-    let delete = document.querySelectorAll('.btn-danger')
-    console.log('delete');
+</script>
+<script>
+    let Delete = document.querySelectorAll('.btn-danger')
+    console.log(Delete);
     // $('.btn-danger').click(function (e) {
-    //     // delete.onclick(e){
-    //         e.preventDefault()
-    //         let yes = confirm('確定嗎 ?')
-    //         if (yes){
-    //         delete.submit()
-    //         }
-    //     // }
+        Delete.onclick(e){
+            e.preventDefault();
+            let yes = confirm('確定嗎 ?')
+            if (yes){
+            delete.submit()
+            }
+        }
     // })
-
-
 </script>
 @endsection
