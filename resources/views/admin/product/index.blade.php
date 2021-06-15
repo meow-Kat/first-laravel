@@ -34,7 +34,7 @@
             <td>{{ $item->text }}</td>
             <td>
                 <a href="{{ asset('/admin/product/edit') }}/{{ $item->id }}" type="button" class="btn btn-primary btn-sm ">Edit</a>
-                <form action="{{ asset('/admin/product/delete') }}/{{  $item->id }} " method="POST">
+                <form class="form-delete" action="{{ asset('/admin/product/delete') }}/{{  $item->id }} " method="POST">
                     @csrf
                     @method('delete')
                     <button type="submit" class="btn btn-danger btn-sm mt-2 ">Delete</button>
@@ -67,15 +67,19 @@
 </script>
 <script>
     let Delete = document.querySelectorAll('.btn-danger')
-    console.log(Delete);
+    let form_delete = document.querySelector('.form-delete')
     // $('.btn-danger').click(function (e) {
-        Delete.onclick(e){
-            e.preventDefault();
-            let yes = confirm('確定嗎 ?')
-            if (yes){
-            delete.submit()
+        Delete.forEach(index =>{
+            index.onclick = function (e){
+                e.preventDefault()
+                let yes = confirm('確定嗎 ?')
+                if (yes){
+                    form_delete.submit()
+                }
             }
-        }
+        })
+
+
     // })
 </script>
 @endsection
