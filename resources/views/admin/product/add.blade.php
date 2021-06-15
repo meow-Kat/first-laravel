@@ -23,8 +23,8 @@
             <input type="name" class="form-control" id="name" name="name" required>
             <label class="py-2" for="price">產品價格</label>
             <input type="price" class="form-control" id="price" name="price" required>
-            <label class="py-2" for="discount">產品折扣</label>
-            <input type="discount" class="form-control" id="discount" name="discount">
+            <label class="py-2" for="discount">產品折扣</label>                       {{-- 最大長度 --}}
+            <input type="discount" class="form-control" id="discount" name="discount" maxlength="3" placeholder="0.5">
             <div class="form-group py-2">
                 <label for="text">產品內容</label>
                 <textarea class="form-control" id="text" rows="3" name="text"></textarea>

@@ -37,7 +37,7 @@
                 <form action="{{ asset('/admin/product/delete') }}/{{  $item->id }} " method="POST">
                     @csrf
                     @method('delete')
-                    <button type="submit" class="btn btn-danger btn-sm mt-2 =">Delete</button>
+                    <button type="submit" class="btn btn-danger btn-sm mt-2 ">Delete</button>
                 </form>
             </td>
         </tr>
@@ -64,5 +64,19 @@
     $(document).ready(function() {
         $('#my-datatable').DataTable()
     } )
+
+    let delete = document.querySelectorAll('.btn-danger')
+    console.log('delete');
+    // $('.btn-danger').click(function (e) {
+    //     // delete.onclick(e){
+    //         e.preventDefault()
+    //         let yes = confirm('確定嗎 ?')
+    //         if (yes){
+    //         delete.submit()
+    //         }
+    //     // }
+    // })
+
+
 </script>
 @endsection
